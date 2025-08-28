@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nicooo — Tous mes réseaux</title>
+  <meta name="description" content="Retrouvez mes réseaux et mon CV protégé par code." />
+  <link rel="icon" href="favicon.ico">
+  <style>
+    body{margin:0;font-family:sans-serif;background:#0b0c10;color:#fff;text-align:center}
+    .avatar{width:150px;height:150px;border-radius:50%;margin-top:40px;border:3px solid #7c3aed}
+    h1{font-size:2em;margin:20px 0}
+    .links{display:grid;gap:16px;max-width:400px;margin:40px auto}
+    .link-btn{display:flex;align-items:center;justify-content:center;gap:12px;padding:14px;background:#111;border-radius:12px;color:#fff;text-decoration:none;font-weight:600}
+    .link-btn:hover{background:#222}
+    .pill{margin-left:auto;font-size:12px;color:#7c3aed;background:rgba(124,58,237,.12);border:1px solid rgba(124,58,237,.35);padding:4px 8px;border-radius:999px}
+    footer{margin:40px 0;color:#aaa}
+  </style>
+</head>
+<body>
+  <img class="avatar" src="avatar.png" alt="Photo de profil de Nicooo" />
+  <h1>Nicooo</h1>
+  <p>Bienvenue sur mon site ! Ici tu as accès à tout mes réseaux !</p>
+
+  <div class="links">
+    <a class="link-btn" href="https://instagram.com/bnicoo19" target="_blank">Instagram <span class="pill">@bnicoo19</span></a>
+    <a class="link-btn" href="https://www.snapchat.com/add/Bnicoo19" target="_blank">Snapchat <span class="pill">@Bnicoo19</span></a>
+    <a class="link-btn" href="https://www.tiktok.com/@Bnicoo19" target="_blank">TikTok <span class="pill">@Bnicoo19</span></a>
+    <button class="link-btn" onclick="openCV()">Accéder à mon CV <span class="pill">Code requis</span></button>
+  </div>
+
+  <footer>© <span id="year"></span> Nicooo. Tous droits réservés.</footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function openCV(){
+      let code = prompt("Entre le code pour accéder au CV :");
+      if(code === "020719"){
+        window.location.href = "cv.pdf";
+      } else {
+        alert("Code incorrect.");
+      }
+    }
+  </script>
+</body>
+</html>
